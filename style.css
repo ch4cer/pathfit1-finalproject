@@ -1,0 +1,284 @@
+/* GLOBAL STYLES */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff; /* Primary Blue (matches your '💙') */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #343a40; /* Darker blue/gray */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background-color: #ffc107; /* Accent Yellow (matches your '💛') */
+    color: #343a40;
+}
+
+/* SECTION STYLES */
+section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 30px;
+    font-weight: 700;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.definition-section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1em;
+}
+
+/* IMAGE/VIDEO STYLES */
+/* Applies to the hero and full-width elements */
+.hero-image, .full-width-image {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    display: block; 
+}
+
+/* CARD GRID LAYOUT (The "Cool" Layout) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+/* --- VIDEO/IMAGE SIZING INSIDE CARDS --- */
+/* TARGETS BOTH IMG AND VIDEO */
+.card img, .card video {
+    width: 100%; 
+    max-height: 220px; /* Use max-height for size control */
+    object-fit: contain; /* UPDATED: Ensures entire media content is visible (no cropping) */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #007bff;
+    margin-top: 0;
+    border-bottom: 2px solid #f4f7f6;
+    padding-bottom: 10px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+/* INTERACTIVE HOVER EFFECT */
+.hover-effect:hover {
+    transform: translateY(-5px) scale(1.02); /* Lift and slightly enlarge */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* FITT GRID */
+.fitt-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.fitt-item {
+    background-color: #ffc107; /* Yellow accent */
+    color: #343a40;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fitt-title {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+
+/* LIST STYLES */
+.large-list {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.large-list li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+/* FOOTER */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* ----------------------------------- */
+/* CSS FOR SCROLL INTERACTION (Hidden state) */
+/* ----------------------------------- */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ----------------------------------- */
+/* SLIDER/CAROUSEL STYLES (NEXT/BACK) */
+/* ----------------------------------- */
+
+.aerobic-collage {
+    /* Ensures the slider container is positioned relative to the card */
+    position: relative; 
+    text-align: center;
+}
+
+.slider-container {
+    /* Limits the viewing area to just one image/video */
+    overflow: hidden; 
+    position: relative;
+    margin-top: 15px;
+}
+
+.slider-track {
+    /* Uses flexbox for layout, allows horizontal movement */
+    display: flex;
+    transition: transform 0.4s ease-in-out; /* Smooth slide animation */
+}
+
+.slider-track .slide {
+    /* Ensures each image/caption block takes up exactly 100% of the slider-container width */
+    flex: 0 0 100%; 
+    margin: 0;
+    padding: 5px;
+    background-color: #f4f7f6; 
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* --- VIDEO/IMAGE SIZING INSIDE SLIDES --- */
+/* TARGETS BOTH IMG AND VIDEO */
+.slider-track img, .slider-track video {
+    width: 100%;
+    max-height: 180px; /* Use max-height for size control */
+    object-fit: contain; /* UPDATED: Ensures entire media content is visible (no cropping) */
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.slider-track figcaption {
+    font-size: 1em;
+    font-weight: 500;
+    color: #343a40;
+}
+
+/* Slider Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 123, 255, 0.7); /* Blue with transparency */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.slider-btn:hover {
+    background: #007bff;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}

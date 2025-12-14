@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATHFIT 1 – Exercise & Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>EXERCISES AND FITNESSES </h1>
+        <p>Your guide to a healthier, stronger, and more active lifestyle. </p>
+    </header>
+
+    <nav>
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#exercise" class="nav-link">Types of Exercise</a> 
+        <a href="#phases" class="nav-link">Phases</a>
+        <a href="#functions" class="nav-link">Functions</a>
+        <a href="#principles" class="nav-link">Principles</a>
+        <a href="#fitt" class="nav-link">FITT</a>
+        <a href="#backpain" class="nav-link">Back Pain</a>
+        <a href="#guidelines" class="nav-link">Guidelines</a>
+    </nav>
+
+    <section id="home" class="hidden">
+        <h2 class="section-title">Welcome to PATHFIT 1 </h2>
+        <img src="c:Users\Acer\Desktop\EXERCISE1.avif" 
+             alt="Exercise Image" 
+             class="hero-image">
+        <p>Start your journey to a healthier lifestyle! Scroll down to explore exercises, types, phases, and more. </p>
+    </section>
+
+    <section id="exercise" class="hidden">
+    <h2 class="section-title">What is Exercise? </h2>
+    <p>Exercise is any purposeful and structured bodily activity undertaken to maintain or improve physical fitness, overall health, and general wellness. It encompasses a wide spectrum of physical movements, from daily activities like walking and cycling to intensive, scheduled routines like weightlifting, running, and specialized sports training. </p>
+    </section>
+    
+    <section id="types" class="hidden">
+    <h2 class="section-title">Types of Exercise </h2>
+    <div class="card-grid">
+        
+        <div class="card aerobic-collage">
+            <h3>Aerobic Exercise </h3>
+            <p>Aerobic exercise increases heart rate and oxygen consumption. Examples include:</p>
+
+            <div class="slider-container">
+                <div class="slider-track" id="aerobic-track" data-current-index="0">
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="Running  Video _ Free HD Video - No Copyright..mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Running </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="Road Bikes are Beautiful.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Cycling </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="This is what 10,000 hours of practice looks like.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Swimming </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="Ever tried jumping rope like a pro_ It’s not just a cardio workout, it’s an art! 💪🏼🔥 shows us how it.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Jump Rope </figcaption>
+                    </figure>
+                </div>
+                <button class="slider-btn prev-btn" onclick="moveSlide('aerobic-track', -1)">&#10094;</button>
+                <button class="slider-btn next-btn" onclick="moveSlide('aerobic-track', 1)">&#10095;</button>
+            </div>
+            
+        </div>
+        
+        <div class="card aerobic-collage">
+            <h3>Anaerobic Exercise 🏋️‍♀️</h3>
+            <p>Anaerobic exercise is short-duration, high-intensity activity. Examples include:</p>
+            
+            <div class="slider-container">
+                <div class="slider-track" id="anaerobic-track" data-current-index="0">
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="Weight Lifting.mp4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Weightlifting </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="Bolt_s first 200m gold! 😍🥇.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Sprinting </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="Best Plyometrics for Beginners _ Run Faster .mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Plyometrics </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="HIIT.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>H.I.I.T. </figcaption>
+                    </figure>
+                </div>
+                <button class="slider-btn prev-btn" onclick="moveSlide('anaerobic-track', -1)">&#10094;</button>
+                <button class="slider-btn next-btn" onclick="moveSlide('anaerobic-track', 1)">&#10095;</button>
+            </div>
+        </div>
+        
+        <div class="card aerobic-collage">
+            <h3>Flexibility Exercises 🤸‍♂️</h3>
+            <p>Activities that stretch and lengthen muscles. Examples include:</p>
+            
+            <div class="slider-container">
+                <div class="slider-track" id="flexibility-track" data-current-index="0">
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="Yogaa.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Yoga </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="Pilates.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Pilates </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="stretch.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Static Stretch </figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <video controls loop muted autoplay>
+                            <source src="🌀 Unlock Muscle Relief with Foam Roller from Hop-Sport! Soothe Your Legs, Back .mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Foam Rolling </figcaption>
+                    </figure>
+                </div>
+                <button class="slider-btn prev-btn" onclick="moveSlide('flexibility-track', -1)">&#10094;</button>
+                <button class="slider-btn next-btn" onclick="moveSlide('flexibility-track', 1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="phases" class="hidden">
+        <h2 class="section-title">Phases of Fitness Program </h2>
+        <div class="card-grid">
+            <div class="card hover-effect">
+                <img src="warm UPP.jpg" alt="Warm-up">
+                <h3>Warm-Up </h3>
+                <ul>
+                    <li>Increases flexibility </li>
+                    <li>Reduces injury risk </li>
+                    <li>Boosts blood flow </li>
+                    <li>Improves performance </li>
+                </ul>
+            </div>
+            <div class="card hover-effect">
+                <img src="exerproper.webp" alt="Workout">
+                <h3>Exercise Proper </h3>
+                <ul>
+                    <li>Push-up – Chest & Triceps </li>
+                    <li>Curl-up – Abs </li>
+                    <li>Heel Raise – Calves </li>
+                    <li>Chin-Up – Back & Biceps </li>
+                    <li>Half Squat – Legs </li>
+                </ul>
+            </div>
+            <div class="card hover-effect">
+                <img src="COOL down.webp" alt="Cool Down">
+                <h3>Cool Down </h3>
+                <p>Helps the body return to normal and relax. </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="functions" class="hidden">
+        <h2 class="section-title">Functions of Exercise </h2>
+        <div class="card-grid">
+            <div class="card hover-effect">
+                <img src="c:Users\Acer\Desktop\strength.jpg" alt="Strength">
+                <p>Builds strength </p>
+            </div>
+            <div class="card hover-effect">
+                <img src="flexibility.jpg" alt="Flexibility">
+                <p>Improves flexibility </p>
+            </div>
+            <div class="card hover-effect">
+                <img src="stress.jpg" alt="Stress Relief">
+                <p>Reduces stress </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="principles" class="hidden">
+        <h2 class="section-title">Principles of Training </h2>
+                <ul>
+            <li><strong>Specificity:</strong> Match exercise to your goal </li>
+            <li><strong>Overload:</strong> Challenge the body to improve </li>
+            <li><strong>Progression:</strong> Increase effort gradually </li>
+            <li><strong>Reversibility:</strong> Stop training → fitness declines ⬇</li>
+            <li><strong>Tedium:</strong> Add variety to avoid boredom </li>
+            <li><strong>Individualization:</strong> Everyone is unique </li>
+        </ul>
+    </section>
+
+    <section id="fitt" class="hidden">
+        <h2 class="section-title">The FITT Formula </h2>
+        <img src="c:Users\Acer\Desktop\FITT.png" alt="FITT Formula" class="full-width-image">
+        <div class="fitt-grid">
+            <div class="fitt-item">
+                <p class="fitt-title">F</p>
+                <p><strong>Frequency:</strong> How often </p>
+            </div>
+            <div class="fitt-item">
+                <p class="fitt-title">I</p>
+                <p><strong>Intensity:</strong> How hard </p>
+            </div>
+            <div class="fitt-item">
+                <p class="fitt-title">T</p>
+                <p><strong>Time:</strong> How long </p>
+            </div>
+            <div class="fitt-item">
+                <p class="fitt-title">T</p>
+                <p><strong>Type:</strong> Kind of exercise </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="backpain" class="hidden">
+        <h2 class="section-title">Back Pain Exercises </h2>
+        <ul class="large-list">
+            <li>Wall Slide – Back & Legs </li>
+            <li>Leg Raises – Core </li>
+            <li>Partial Sit-Ups – Abs </li>
+            <li>Back Leg Swing – Mobility </li>
+            <li>Knee-to-Chest Stretch – Relaxation </li>
+        </ul>
+    </section>
+
+    <section id="guidelines" class="hidden">
+        <h2 class="section-title">Guidelines in Exercising </h2>
+        <ul class="large-list">
+            <li>Exercise 30–60 mins, 3–5 times/week </li>
+            <li>Wear comfortable clothes </li>
+            <li>Best time: morning or late afternoon </li>
+            <li>Avoid extreme workouts </li>
+            <li>"No Pain No Gain" is a myth </li>
+        </ul>
+    </section>
+
+    <footer>
+        PATHFIT 1 – Final Project Website © 2025 
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
